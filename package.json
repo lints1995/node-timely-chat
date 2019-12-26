@@ -1,0 +1,12 @@
+{
+  "name": "node-timely-chat",
+  "version": "1.0.0",
+  "description": "node-timely-chat",
+  "main": "index.js",
+  "author": "lints",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "nodejs-websocket": "^1.7.1"
+  }
+}

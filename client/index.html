@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>聊天</title>
+</head>
+<section id="timely" v-cloak @keyup.13='handleSend'>
+    <div class="show-content" ref="msg">
+        <transition-group name="fade">
+            <div v-for="(item,index) in msg" :key="index" class="item">
+                <div v-show='USER_INFO.id!=item.id'>
+                    <figure class="face-wrap">
+                        <img class="face" :src='item.face' />
+                        <h1 class="nickname">{{item.nickname}}</h1>
+                    </figure>
+                    <p class="item-msg content-left">{{item.message}}</p>
+                </div>
+                <div v-show='USER_INFO.id==item.id'>
+                    <figure class="face-wrap right">
+                        <h1 class="nickname">{{item.nickname}}</h1>
+                        <img class="face" :src='item.face' />
+                    </figure>
+                    <p class="item-msg content-right">{{item.message}}</p>
+                </div>
+            </div>
+        </transition-group>
+    </div>
+    <div class="input-wrap">
+        <input v-model='sendMsg' class="input-content" placeholder="请输入发送内容" />
+        <button @click='handleSend' class="btn">发送</button>
+    </div>
+</section>
+
+<body>
+    <script src="//cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script src="../scripts/helper.js"></script>
+</body>
+
+</html>

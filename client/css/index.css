@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    transition: all .2s linear;
+}
+
+[v-cloak] {
+
+    display: none;
+}
+
+::-webkit-scrollbar {
+    /* 滚动条的宽度 */
+    width: 2px;
+    height: 2px;
+}
+
+
+#timely {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-height: 1920px;
+    background: url('../img/bg.jpg') no-repeat 100%;
+    background-size: cover;
+}
+
+.show-content {
+    position: absolute;
+    width: 96%;
+    height: 86%;
+    top: 2%;
+    left: 2%;
+    overflow-y: scroll;
+}
+
+.item-msg {
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-top: 12px;
+    word-break: break-all;
+    padding-bottom: 12px;
+}
+
+.face-wrap {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+}
+
+.nickname,
+.face {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nickname {
+    color: #fff;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+.face {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.input-wrap {
+    position: fixed;
+    width: 96%;
+    height: 52px;
+    bottom: 2%;
+    right: 2%;
+}
+
+.input-content,
+.btn {
+    position: absolute;
+}
+
+.input-content {
+    width: 70%;
+    height: 50px;
+    font-size: 16px;
+    text-indent: 12px;
+    background: none;
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+}
+
+
+
+.btn {
+    width: 28%;
+    height: 52px;
+    right: 0;
+    margin-left: 2%;
+    font-size: 18px;
+    letter-spacing: 2px;
+    background: #000;
+    color: #fff;
+    outline: none;
+    border: 1px solid #fff;
+}
+
+.right {
+    text-align: right;
+}
+
+.content-right {
+    padding-left: 100px;
+    text-align: right;
+}
+
+.content-left {
+    padding-right: 100px;
+}
+
+/* 动画 */
+.item {
+    transition: all .1s linear;
+}
+
+@keyframes ani {
+    0% {
+        margin-top: 12px;
+        opacity: 0;
+    }
+
+    10% {
+        margin-top: 11px;
+        opacity: .1;
+    }
+
+    20% {
+        margin-top: 10px;
+        opacity: .2;
+    }
+
+    30% {
+        margin-top: 9px;
+        opacity: .3;
+    }
+
+    40% {
+        margin-top: 8px;
+        opacity: .4;
+    }
+
+    50% {
+        margin-top: 7px;
+        opacity: .5;
+    }
+
+    60% {
+        margin-top: 6px;
+        opacity: .6;
+    }
+
+    70% {
+        margin-top: 4px;
+        opacity: .7;
+    }
+
+    80% {
+        margin-top: 2px;
+        opacity: .8;
+    }
+
+    90% {
+        margin-top: 1px;
+        opacity: .9;
+    }
+
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    animation: ani .4s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    animation: ani .2s;
+}
