@@ -1,4 +1,4 @@
-var ws = new WebSocket('ws://172.16.1.35:9000');
+var ws = new WebSocket('ws://192.168.173.228:9090');
 
 new Vue({
     name: '#timely',

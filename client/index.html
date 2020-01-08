@@ -12,17 +12,18 @@
     <div class="show-content" ref="msg">
         <transition-group name="fade">
             <div v-for="(item,index) in msg" :key="index" class="item">
-                <div v-show='USER_INFO.id!=item.id'>
-                    <figure class="face-wrap">
+                <p v-show="item.common" class="notice-msg">{{item.message}}</p>
+                <div v-show='USER_INFO.id!=item.id&&!item.common'>
+                    <figure class="face-wrap left">
                         <img class="face" :src='item.face' />
                         <h1 class="nickname">{{item.nickname}}</h1>
                     </figure>
                     <p class="item-msg content-left">{{item.message}}</p>
                 </div>
-                <div v-show='USER_INFO.id==item.id'>
+                <div v-show='USER_INFO.id==item.id&&!item.common'>
                     <figure class="face-wrap right">
-                        <h1 class="nickname">{{item.nickname}}</h1>
                         <img class="face" :src='item.face' />
+                        <h1 class="nickname">{{item.nickname}}</h1>
                     </figure>
                     <p class="item-msg content-right">{{item.message}}</p>
                 </div>

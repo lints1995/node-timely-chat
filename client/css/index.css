@@ -43,33 +43,43 @@ html {
     font-size: 14px;
     letter-spacing: 1px;
     padding-top: 12px;
+    margin-bottom: 12px;
+    word-break: break-all;
+    padding-bottom: 12px;
+    clear: both;
+}
+.notice-msg{
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-top: 12px;
     word-break: break-all;
     padding-bottom: 12px;
 }
 
 .face-wrap {
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-}
-
-.nickname,
-.face {
-    display: inline-block;
-    vertical-align: middle;
+    margin-right: 0;
+    display: block;
+    min-width: auto;
+    height: 75px;
 }
 
 .nickname {
-    color: #fff;
-    font-size: 14px;
+    color: #999;
+    font-size: 12px;
     padding-left: 6px;
+    text-align: center;
+    padding: 8px;
 }
 
 .face {
+    display: block;
     width: 40px;
     height: 40px;
     border-radius: 40px;
     object-fit: cover;
+    margin: 0 auto;
 }
 
 .input-wrap {
@@ -112,16 +122,24 @@ html {
 }
 
 .right {
-    text-align: right;
+    float: right;
+
+}
+
+.left {
+    float: left;
+
 }
 
 .content-right {
     padding-left: 100px;
     text-align: right;
+    padding-right: 8px;
 }
 
 .content-left {
     padding-right: 100px;
+    padding-left: 8px;
 }
 
 /* 动画 */

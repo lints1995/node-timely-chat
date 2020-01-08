@@ -7,6 +7,6 @@
   "license": "MIT",
   "dependencies": {
     "mysql": "^2.16.0",
-    "nodejs-websocket": "^1.7.1"
+    "nodejs-websocket": "^1.7.2"
   }
 }
