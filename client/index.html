@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <title>聊天</title>
 </head>
+<body>
 <section id="timely" v-cloak @keyup.13='handleSend'>
     <div class="show-content" ref="msg">
         <transition-group name="fade">
@@ -36,7 +37,6 @@
     </div>
 </section>
 
-<body>
     <script src="//cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <script src="../scripts/helper.js"></script>
 </body>
